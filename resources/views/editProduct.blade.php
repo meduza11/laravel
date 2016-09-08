@@ -2,6 +2,9 @@
 
 @section('content')
 <div class="panel-body">
+    <!-- Отображение ошибок проверки ввода -->
+    @include('common.errors')
+    <!-- Форма новой задачи -->
     <div class="panel panel-default">
         <div class="panel-body">
             <table class="table table-striped task-table">
@@ -29,18 +32,18 @@
                         </td>
                         <td class="table-text">
                             <div>Качество</div>
-                            <select name="category">
+                            <select name="category" class="form-control">
                                 <option>low</option>
                                 <option>medium</option>
                                 <option>hight</option>
                             </select>
                         </td>
-            
-                <td class="table-text">
-                   
-                        {{ csrf_field() }}
-                        <button class="btn btn-success">Save</button>
-                    </form>
+
+                        <td class="table-text">
+                            <br>
+                            {{ csrf_field() }}
+                            <button class="btn btn-success">Save</button>
+                </form>
                 </td>
                 </tr>
                 </tbody>

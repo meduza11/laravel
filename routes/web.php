@@ -23,14 +23,17 @@ return view('products', [
  * Добавить новую задачу
  */
 Route::post('/product', function (Request $request) {
-//  $validator = Validator::make($request->all(), [
-//    'name' => 'required|max:255',
-//  ]);
-//  if ($validator->fails()) {
-//    return redirect('/')
-//      ->withInput()
-//      ->withErrors($validator);
-//  }
+  $validator = Validator::make($request->all(), [
+    'name' => 'required|max:255',
+      'price' => 'required|integer',
+      'discription' => 'required',
+      'category' => 'required',
+  ]);
+  if ($validator->fails()) {
+    return redirect('/')
+      ->withInput()
+      ->withErrors($validator);
+  }
 $product = new Product();
 $product->name = $request->name;
 $product->price = $request->price;

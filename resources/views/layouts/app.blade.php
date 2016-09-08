@@ -17,7 +17,7 @@
   <body>
     <div class="container">
       <nav class="navbar navbar-default">
-        <!-- Содержимое Navbar -->
+          <div class="text-center"><h2>Laravel</h2></div>
       </nav>
     </div>
     @yield('content')

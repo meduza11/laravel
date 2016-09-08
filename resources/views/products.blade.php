@@ -22,7 +22,7 @@
                 <input type="text" name="discription" id="task-name" class="form-control" placeholder="описание">
             </div>
             <div class="col-sm-2">
-                <select name="category">
+                <select name="category" class="form-control">
                     <option>low</option>
                     <option>medium</option>
                     <option>hight</option>
@@ -77,11 +77,11 @@
                         <form action="/product/{{ $product->id }}" method="POST">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
-                            <button>Удалить</button>
+                            <button class="btn btn-danger">Удалить</button>
                         </form>
                         <form action="/edit/{{ $product->id }}"  method="POST">
                             {{ csrf_field() }}
-                            <button>Редактировать</button>
+                            <button class="btn btn-primary">Редактировать</button>
                         </form>
                     </td>  
                 </tr>
